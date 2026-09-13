@@ -68,3 +68,5 @@ Human reviewers(the event hosts) get instant notifications on Discord when a pic
 ## How to reset the game for testing\
 
 * In case you would like to reset the game you can just click the button in birthday.html.
+
+  ### WARNING!! THE DISCORD SERVER IS PUBLIC SO DO NOT SHARE PERSONAL INFO/PHOTOS
