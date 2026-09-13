@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mission Control - Terminal</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1>MISSION CONTROL</h1>
+            <p class="status">AGENT:BINARY//TASK ACTIVE</p>
+            <div class="riddle-box">
+                <p class="riddle-title">&gt;Current objective:</p>
+                <p  id="riddle-text">
+                    PLACEHOLDER PLACEHOLDER PLACEHOLDER PLACEHOLDER
+                </p>
+            </div>
+            <div  class="mission-form">
+                <label for="photo-upload">UPLOAD VISUAL EVIDENCE:</label>
+                <input type="file" id="photo-upload" accept="image/*" onchange="previewPhoto(event)">
+                <div id="preview-container" style="display: none; margin-top: 10px;">
+                    <img id="user-photo-preview" src="" alt="Scan Preview">
+                    <p id="scan-status">[STATUS: READY FOR TRANSMISSION]</p>
+                </div>
+                <button id="submit-btn" onclick="submitMissionData()">SUBMIT PHOTO</button>
+            </div>
+            <p id="feedback-message" class="feedback"></p>
+            <a href="info.html" class="btn-secondary">ABOUT THE AI</a>
+            <p class="system-version">[SYSTEM-VERSION 1.0.0]</p>
+        </div>
+        <script src="script.js"></script>
+    </body>   
+</html>

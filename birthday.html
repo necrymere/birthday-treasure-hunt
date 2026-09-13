@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mission Control - Victory</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h1 style="color: #00ff66">MISSION ACCOMPLISHED</h1>
+            <p class="status">ALL OBJECTIVES VERIFIED // ACCESS GRANTED</p>
+            <div class="riddle-box" style="text-align: center; border-color: #00ff66; padding: 1.5rem; margin: 1.5rem 0">
+            <h2 style="color: #00e5ff; margin-top: 2rem; font-size: 1.1rem;">MISSION GALLERY</h2>
+            <div id="polaroid-gallery" class="polaroid-container"></div>
+            <p style="color: #ffffff; font-size: 1.2rem; font-weight: bold; margin-top:10px;">
+            HAPPY BIRTHDAY BINARY!!!<3
+        </p>
+        <p style="color: #8b949e; margin-top: 10px; font-size: 0.9rem;">
+            Look up!
+        </p>
+            </div>
+            <button id="submit-btn" onclick="resetProgress()">RESTART MISSION</button>
+            <p class="system-version">[ SYSTEM VERSION 1.0.0]</p>
+        </div>
+
+        <script>
+            function resetProgress(){
+                localStorage.clear()
+                window.location.href = "game.html";
+            }
+            const MISSION = [
+                { riddle: "FIRST RIDDLE", answer: "SECOND ANSWER" },
+                { riddle: "SECOND RIDDLE", answer: "SECOND ANSWER" },
+                { riddle: "THIRD RIDDLE", answer: "THIRD ANSWER" }
+            ];
+            window.onload = function(){
+                const gallery = document.getElementById("polaroid-gallery");
+                if (!gallery) return;
+                gallery.innerHTML = "";
+
+                MISSION.forEach((item, index) => {
+                const photoData = localStorage.getItem(`mission_photo_${index}`);
+
+                const card = document.createElement("div");
+                card.className = "polaroid-card";
+
+                const img = document.createElement("img")
+                img.src = photoData ? photoData : "my-photo.jpg"
+
+                const caption = document.createElement("div")
+                caption.className = "polaroid-caption"
+                caption.innerHTML = `<strong>L${index + 1}:</strong> ${item.answer}<br><em>"${item.riddle}"</em>`;
+
+                card.appendChild(img);
+                card.appendChild(caption);
+                gallery.appendChild(card);
+               
+                });
+            };
+        </script>
+    </body>
+</html>
