@@ -26,7 +26,8 @@ Human reviewers(me and my friends) get instant notifications on Discord when a p
 
  4. **Browser `localStorage`: Built-in web browser storage. It remembers which level the player is on(so refreshing the page does not erase their progress) and saves their uploaded photos.
 
- 5. **Polaroid Victory Gallery(`birthday.html`):** The final page unlocked after the last riddle. It takes all photos saved in the browser and displays them as floating Polaroid pictures with the riddle answers written on them.
+ 5. **Polaroid Victory Gallery(`birthday.html`):** The final page unlocked after the last riddle. It takes all photos saved in the browser and displays them as floating Polaroid pictures with the riddle answers written on them.The "About AI" section is not about actual AI it is a joke that the AI verifying the pictures is me(placeholder will be replaced with my photo).
+Also design was not a big part of the site because my focus was it working and looking somewhat like a terminal. Perhaps the container was a bit AI-ish so I deleated it. 
 
  ---
 
