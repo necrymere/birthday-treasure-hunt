@@ -1,8 +1,8 @@
-# Birthday Treasure Hunt (Mission Control)
+# Birthday Treasure Hunt 
 
 Welcome to the **Birthday Treasure Hunt**! This is a web-based, real-world interactive game designed for a birthday event. The player logs into a cyberpunk terminal, recives riddles, travels to real-world locations, takes photos as proof and submits them.
 
-Human reviewers(the event hosts) get instant notifications on Discord when a picture is submitted. Reviewers can the approve or reject the submission in real time through a live database. Once all 3 levels are completed, the player unlocks a special victory page with a Polaroid photot gallery.
+Human reviewers(me and my friends) get instant notifications on Discord when a picture is submitted. Reviewers can approve or reject the submission in real time through a live database. Once all levels are completed, the player unlocks a special victory page with a Polaroid photot gallery.
 
 ---
 
@@ -18,7 +18,7 @@ Human reviewers(the event hosts) get instant notifications on Discord when a pic
 
  ## How the system works plainly
 
- 1. **The Game Website(`game.html`):** The web page the player sees on their phone or laptop. It shows the current riddle and has a button to upload a photo.
+ 1. **The Game Website(`game.html`):** The web page the player sees on their phone. It shows the current riddle and has a button to upload a photo.
 
  2. **Discord Webhooks:** A tool that automatically sends a message from the website directly into the Discord channel. As soon as the player submits a photo, it pops up in Discord so you can inspect it.
 
@@ -34,7 +34,7 @@ Human reviewers(the event hosts) get instant notifications on Discord when a pic
 
  ## Step 1:How the player plays the game:
   
-  1. Open game.html
+  1. Open the link.
   2. Read the riddle under > Curent Objective
   3. Click Choose File, pick a photo taken at the location, and click SUBMIT PHOTO
   4. The text on screen will change to: MISSION DATA TRANSMITTED. AWAITING APPROVAL.\
@@ -42,11 +42,11 @@ Human reviewers(the event hosts) get instant notifications on Discord when a pic
 
   ## Step 2: How Reviewers Approve or Reject Submissions
 
-  As a reviewer/host, here is what you would do when a photo is submmited:
+  As a reviewer, here is what you would do when a photo is submmited:
 
 1. Check Discord: Open your discord channel. You will see a new message with the uploaded photo and an alert saying LEVEL X SUBMISSION.
 2. Open Firebase: Go to your Firebase Database Console link.
-3. Find the Level Node: Click mission to expand it. You will see level_0(Level 1), level_1(Level 2) and so on.
+3. Find the Level Node: Click mission to expand it. You will see level_0(which is Level 1), level_1(which is Level 2) and so on.
 4. Change the Status:
        * Click on the word "PENDING" under status.
        * To Aprove: Type APPROVED(MUST BE ALL CAPS) and press Enter on your keyboard. Within 3 seconds, the palyer side will move on to the next riddle.
@@ -69,4 +69,4 @@ Human reviewers(the event hosts) get instant notifications on Discord when a pic
 
 * In case you would like to reset the game you can just click the button in birthday.html.
 
-  ### WARNING!! THE DISCORD SERVER IS PUBLIC SO DO NOT SHARE PERSONAL INFO/PHOTOS
+  ### WARNING!! THE DISCORD SERVER IS PUBLIC SO DO NOT SHARE PERSONAL INFO/PHOTOS. EITHER FIND PHOTOS ON THE WEB, TAKE PHOTOS OF A PET JUST DO NOT SUBMIT PICTURES OF YOUR FACE.
